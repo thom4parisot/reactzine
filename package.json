@@ -1,0 +1,34 @@
+{
+  "name": "news.ee",
+  "version": "1.0.0",
+  "description": "A single page app prototype using React.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-js && npm run build-css",
+    "build-js": "browserify -e src/js/app.js -o dist/main.js",
+    "build-css": "",
+    "watch": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oncletom/news.ee.git"
+  },
+  "author": "Thomas Parisot (https://oncletom.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oncletom/news.ee/issues"
+  },
+  "homepage": "https://github.com/oncletom/news.ee",
+  "dependencies": {
+    "fastclick": "~1.0.3",
+    "less": "~1.7.4",
+    "react": "~0.11.1",
+    "xhr": "~1.14.1"
+  },
+  "devDependencies": {
+    "browserify": "~5.10.0",
+    "reactify": "~0.14.0",
+    "watchify": "~1.0.2"
+  }
+}
