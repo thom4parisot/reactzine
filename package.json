@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-js && npm run build-css",
-    "build-js": "browserify -e src/js/app.js -o dist/main.js",
+    "build-js": "browserify -t reactify -e src/js/app.js -s app -o dist/main.js",
     "build-css": "",
-    "watch": ""
+    "watch": "watchify -v -t reactify -e src/js/app.js -s app -o dist/main.js"
   },
   "repository": {
     "type": "git",
