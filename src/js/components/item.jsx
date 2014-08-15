@@ -5,8 +5,6 @@
 var React = require('react');
 var cx = require('react-classset');
 
-var Duration = require('./duration.jsx');
-
 module.exports = React.createClass({
   getInitialState: function(){
     return { selected: false, favourited: false };
@@ -19,12 +17,12 @@ module.exports = React.createClass({
       <article className={this.getClassNames()} onClick={this.handleClick}>
         <header className="item__cover" data-background={data.image}></header>
 
-        <h2>{data.name}</h2>
+        <h2 className="item__title">{data.name}</h2>
 
         <footer>
           <ul className="item-metadata">
-            <li className="item-metadata__source">{data.source}</li>
-            <li className="item-metadata__duration"><Duration duration={data.duration} /></li>
+            <li className="item-metadata__data item-metadata__data--source">{data.source}</li>
+            <li className="item-metadata__data item-metadata__data--duration">{this.getDurationLabel()}</li>
           </ul>
 
           <ul className="item-actions">
@@ -71,5 +69,9 @@ module.exports = React.createClass({
       this.state.favourited && 'item--favourited',
       this.state.selected && 'item--selected'
     );
+  },
+
+  getDurationLabel: function getDurationLabel(){
+    return this.props.duration && Math.ceil(this.props.duration / 60) + ' min';
   }
 });

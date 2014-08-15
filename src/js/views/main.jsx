@@ -18,9 +18,9 @@ module.exports = React.createClass({
     );
   },
 
-  renderItem: function(itemData){
+  renderItem: function(itemData, i){
     return (
-      <Item data={itemData}></Item>
+      <Item className="blah" data={itemData}></Item>
     );
   }
 });
