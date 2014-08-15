@@ -1,6 +1,4 @@
 .item {
-  @spacing: 1rem;
-
   background-color: fade(@primary-color, 3%);
   color: @primary-color;
   padding: @spacing;
@@ -38,10 +36,10 @@
    Double height variation
   */
   &.item--double{
-
     .item__cover{
       background-position: center center;
       background-size: cover;
+      height: 3em;
       margin-bottom: 0;
     }
   }
@@ -60,30 +58,50 @@
     font-size: 1rem;
     margin: 0;
   }
+}
 
-  .item-actions,
-  .item-metadata {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.item-actions,
+.item-metadata {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .item-metadata {
-    font-size: 0.7rem;
-    left: @spacing;
-    position: absolute;
-    top: @spacing;
+.item-metadata {
+  font-size: 0.7rem;
+  left: @spacing;
+  position: absolute;
+  top: @spacing;
 
-    .item-metadata__data {
-      background: @primary-bg-color;
-      color: @primary-color;
-      display: inline-block;
-      margin: 0 @spacing/2 0 0;
-      padding: .5em;
+  .item-metadata__data {
+    background: @primary-bg-color;
+    color: @primary-color;
+    display: inline-block;
+    margin: 0 @spacing/2 0 0;
+    padding: .5em;
 
-      &:empty {
-        display: none;
-      }
+    &:empty {
+      display: none;
     }
+  }
+}
+
+
+.item-actions__playback-link {
+  display: block;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  text-indent: -300em;
+
+  background-size: contain;
+  height: 2rem;
+  width: 2rem;
+
+  .item--audio &{
+    background-image: url('../src/assets/icon_audio.png');
+  }
+  .item--video &{
+    background-image: url('../src/assets/icon_video.png');
   }
 }

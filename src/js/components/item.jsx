@@ -27,12 +27,12 @@ module.exports = React.createClass({
 
           <ul className="item-actions">
             <li className="item-actions__playback">
-              <a href="#play" onClick={this.handleClick}>
+              <a href="#play" className="item-actions__playback-link" onClick={this.handleClick}>
                 {data.duration && 'Play'}
               </a>
             </li>
             <li className="item-actions__favourites">
-              <a href="#favourite" onClick={this.toggleFavourite}>
+              <a href="#favourite" className="item-actions__favourites-link" onClick={this.toggleFavourite}>
                 {!this.state.favourited ? 'Add to' : 'Remove from'} favourites
               </a>
             </li>
