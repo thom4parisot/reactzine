@@ -1,22 +1,61 @@
 .item {
   @spacing: 1rem;
 
-  background-color: #333;
-  color: #fff;
+  background-color: fade(@primary-color, 3%);
+  color: @primary-color;
   padding: @spacing;
   position: relative;
+  width: 49%;
+
+  &:nth-child(n+1) {
+    margin-right: 0;
+  }
+
+
+  transition: color .2s ease, background-color .2s ease;
+
+  a {
+    color: @primary-color;
+  }
 
   .item__cover {
     margin-bottom: 3em;
   }
 
-  &.item--double .item__cover{
-    background-position: center center;
-    background-size: cover;
-    margin-bottom: 0;
-    min-height: 10rem;
+  /*
+   States
+  */
+  &.item--selected {
+    background-color: @secondary-color;
+    color: @secondary-bg-color;
+
+    a {
+      color: @secondary-bg-color;
+    }
   }
 
+  /*
+   Double height variation
+  */
+  &.item--double{
+
+    .item__cover{
+      background-position: center center;
+      background-size: cover;
+      margin-bottom: 0;
+    }
+  }
+
+  /*
+   Hero variation
+  */
+  &.item--hero {
+    flex: 0 0 99%;
+  }
+
+  /*
+   Sub components
+   */
   .item__title {
     font-size: 1rem;
     margin: 0;
@@ -36,8 +75,8 @@
     top: @spacing;
 
     .item-metadata__data {
-      background: #fafafa;
-      color: #333;
+      background: @primary-bg-color;
+      color: @primary-color;
       display: inline-block;
       margin: 0 @spacing/2 0 0;
       padding: .5em;

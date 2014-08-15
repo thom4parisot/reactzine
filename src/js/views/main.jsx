@@ -26,11 +26,30 @@ module.exports = React.createClass({
   },
 
   render: function(){
-    var itemNodes = this.props.items.map(this.renderPageItem);
+    var pages = this.paginate(5);
 
     return (
-      <div className="items-list">{itemNodes}</div>
+      <div className="items-list">{pages}</div>
     );
+  },
+
+  paginate: function(itemsPerPage){
+    var i = 0;
+    var length = this.props.items.length;
+    var pages = [];
+    var self = this;
+
+    for (; i < length; i += itemsPerPage){
+      pages.push(this.props.items.slice(i, i + itemsPerPage));
+    }
+
+    return pages.map(function(page, i){
+      return (
+        <div key={i} className="items-list__page">
+          {page.map(self.renderPageItem)}
+        </div>
+      )
+    });
   },
 
   renderPageItem: function(itemData, i, arr){
@@ -40,7 +59,7 @@ module.exports = React.createClass({
     });
 
     return (
-      <Item layout={layout} data={itemData}></Item>
+      <Item key={'article.' + i} layout={layout} data={itemData}></Item>
     );
   }
 });

@@ -7,10 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-js && npm run build-css",
     "build-js": "browserify -t reactify -e src/js/app.js -s app > dist/main.js",
-    "build-css": "catw -c 'lessc -' 'src/styles/*.less' > dist/main.css",
+    "build-css": "lessc src/styles/main.less > dist/main.css",
     "watch": "npm run watch-css & npm run watch-js",
     "watch-js": "watchify src/js/app.js -dv -t reactify -s app -o dist/main.js",
     "watch-css": "catw -w -v -c 'lessc src/styles/main.less' src/styles/*.less src/styles/components/*.less -o dist/main.css"
+  },
+  "browser": {
+    "react": "./node_modules/react/dist/react.min.js"
   },
   "repository": {
     "type": "git",
