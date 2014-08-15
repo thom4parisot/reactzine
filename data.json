@@ -1,0 +1,182 @@
+[
+  {
+    "name": "How To Hack A New Brain For Your Old Game Boy With Raspberry Pi",
+    "type": "article",
+    "url": "http://feedproxy.google.com/~r/fastcolabs/~3/qEN3o1gvI4U/how-to-hack-a-new-brain-for-your-old-gameboy",
+    "source": "Fast Company",
+    "duration": null,
+    "description": "A lot of us have old school Game Boys lying around, but even if they still work, they require hard-to-find game cartridges. Good news: The Internet is awash in projects that let you use a $40 Raspberry Pi and a game emulator to breathe new life into otherwise dust-covered gadgets of yesteryear. Here we outline three of them.\n\nFair warning: These types of DIY hardware projects aren't for the technically faint of heart--they frequently involve soldering, rewiring, and modifying the original plastic enclosures to accommodate new guts. But if that last sentence didn't freak you out, these mods can make for some weekend tinkering that will take care of the whole boredom thing a lot more constructively than Candy Crush ever could.\n\nBringing Your Old-School Game Boy Back To Life\n\nIf you keep an eye on Hacker News, you likely saw this gem bubble up the ranks last week. The Super Pi Boy project uses a Model B Raspberry Pi, broken Game Boy, printed circuit board (PCB) for controls, some new buttons, a 3.5-inch LCD screen, and a tiny audio amplifier.\n\n\n\nWith only a slight modification to the original Game Boy enclosure, it turns out the Raspberry Pi model B fits perfectly inside. To get the full sensory experience, the game audio comes through the amplifier, which is hooked up to the Pi and lives inside the Game Boy enclosure. Installing a backlit LED screen requires a little soldering and the controller board needs to be trimmed slightly, but it all fits. The whole thing is wired together and then powered by an external USB battery pack.\n\nLike most video game hacks of this nature, the Super Bi Boy uses a video game emulator called RetroPi to run whatever games you want to play. In this particular mod, two additional buttons are added to the back of the Game Boy, so you're not strictly limited to the two-button gameplay of old school Game Boy games.\n\nFor detailed instructions and schematics, check out the Super Pi Boy website.\n\nIf you happen to have one of Nintendo's later, slimmer Game Boy Pocket handhelds lying around, don't worry: There's a Raspberry Pi mod for that, too. Despite the Game Boy Pocket's smaller size, the so-called Pi-Pocket mod manages to fit a Raspberry Pi Model B, lithium ion battery (to eliminate the need for AAA batteries), audio amplifier, and color LCD screen inside the device without any dramatic modifications to the original enclosure. Unlike the Super Pi Boy, this mod uses a Teensy 2.0 USB dev board to make the buttons work with the Raspberry Pi.\n\nSince the Pi has more interfaces than are needed for this project, the mod involves removing a few ports from the device to save space. This, along with installing the new display, replacing the original Game Boy speaker and adding a more modern power source, involves a fair amount of soldering, hot gluing, wiring, and patience.\n\n\n\nIf you can't get your hands on an original Game Boy system of any kind, you can always just 3-D print your own enclosure. The maker learning hub Adafruit has a project detailing just such an endeavor. This particular project calls for a spare Super Nintendo controller, which is taken apart and used for its buttons.\n\nBeyond that, the mod is comparable to the Super Pi Boy and Pi-Pocket projects in terms of its approach and complexity. If you have access to a 3-D printer and want to be able to say \"I 3-D printed my own Game Boy\" to people, check out the detailed instructions here.\n\nIf you're not a Nintendo devotee but still want in on the retro game-hacking glory, it's possible to pull off the same thing using a Sega Game Gear.",
+    "image": "http://h.fastcompany.net/multisite_files/fastcompany/imagecache/620x350/poster/2014/07/3033678-poster-p-1-how-to-hack-a-new-brain-for-your-old-gameboy.jpg"
+  },
+  {
+    "name": "WOZZECK In Focus: Ed Gardner",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/LCYpmDGUHJc",
+    "source": "English National Opera",
+    "duration": 84,
+    "description": "This May Carrie Cracknell presents a powerful new staging of Berg's 20th century masterpiece. Ed Gardner (conductor) talks about the music.\nPerformances 11-25 May.\nTickets from £19\neno.org\n#ENOWozzeck\n\nwww.eno.org",
+    "image": "https://i1.ytimg.com/vi/LCYpmDGUHJc/maxresdefault.jpg"
+  },
+  {
+    "name": "Wired.co.uk Podcast 155: China's Moon landing, Facebook autoplay ads, Elsevier vs open access",
+    "type": "audio",
+    "url": "http://www.wired.co.uk/podcast/episode-155",
+    "source": "Wired",
+    "duration": 2100,
+    "description": "Listen this week for an entertaining 30-minute look at the most\ninteresting technology and science stories from the last seven\ndays, with Wired.co.uk's Olivia Solon, Liat Clark and Katie\nCollins.\n\nThis week:\n\nTop stories\n 1) China lands 'Jade Rabbit' on the Moon\n 2) Brain scans suggest those in vegetative state react emotionally\nto loved ones\n 3) Twitter introduces changes to block functionality, reverses\nthem immediately\n 4) Elsevier clamps down on academics posting their own papers\nonline\n\nDiscussion stories\n 1)&nbsp;Facebook is tracking your 'self-censorship' &amp; is\nlaunching autoplay video ads\n 2)&nbsp;NSA's precarious PR: we'll consider Snowden amnesty, while\ncomparing him to a hostage taker\nBy: Olivia Solon, Continue reading...",
+    "image": "http://cdni.wired.co.uk/620x620/d_f/Final+Podcast+Image+(5).jpg"
+  },
+  {
+    "name": "Affairs: Quality of Life Cities (Monocle.com)",
+    "type": "article",
+    "url": "http://monocle.com/film/affairs/quality-of-life-cities/",
+    "source": "Monocle",
+    "duration": null,
+    "description": "Monocle takes a cinematic look at the top cities in our 2014 Quality of Life Survey. We spotlight Copenhagen at number one, Tokyo as our top Asian city and Vancouver leading the way in North America.",
+    "image": "http://images.cdn.monocle.com/2/1000/1000/5/uploads/image/film/chooserqol1-539d9cd718fdf-539dd74984c22.jpg"
+  },
+  {
+    "name": "Required reading: A year of Google coverage to prepare you for I/O",
+    "type": "article",
+    "url": "http://feeds.arstechnica.com/~r/arstechnica/index/~3/XNvHl5ehG94/",
+    "source": "Ars Technica",
+    "duration": null,
+    "description": "Brush up on Google's year, and you'll get context—and possible insight—for what's coming.",
+    "image": "http://cdn.arstechnica.net/wp-content/uploads/2014/06/Screen-Shot-2014-06-23-at-12.20.27-PM.png"
+  },
+  {
+    "name": "Positive signs for Critically Endangered European eel",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/e9wg6TErkgI",
+    "source": "Zoological Society of London",
+    "duration": 154,
+    "description": "There are positive signs of recovery for the critically endangered European eel coming from the first count of the year in the Thames Estuary by conservationists from the Zoological Society of London. See how ZSL been working together to monitor this critically endangered species. http://www.zsl.org.",
+    "image": "https://i1.ytimg.com/vi/e9wg6TErkgI/sddefault.jpg"
+  },
+  {
+    "name": "Drugs, science and society - Event Q&A",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/Lyc5Eyw8SoA",
+    "source": "Royal Institution",
+    "duration": 1253,
+    "description": "Psychiatrist and neuropsychopharmacologist Prof David Nutt, and Sharon Ruston, Professor of Romanticism at Lancaster University, explore the past, present and future of our societal and political attitudes towards drugs. From supposedly \"medical\" experimentations in the 18th and 19th centuries, to modern-day government drugs policy and the rise of new 'legal highs'. Chaired by Kate Kelland, EMEA Health and Science Correspondent for Reuters,\n\nThis is the Q&A section of the Ri event. You can watch the full lecture here: http://www.youtube.com/watch?v=qUNzoa991g4\n\nWatch more science videos on the Ri Channel http://richannel.org\n\nThe Ri is on Twitter: http://twitter.com/ri_science\nand Facebook: http://www.facebook.com/royalinstitution\nSubscribe for the latest science videos: http://richannel.org/newsletter",
+    "image": "https://i1.ytimg.com/vi/Lyc5Eyw8SoA/maxresdefault.jpg"
+  },
+  {
+    "name": "ww1: Month of Madness - London",
+    "type": "audio",
+    "url": "http://downloads.bbc.co.uk/podcasts/ww1/ww1/ww1_20140627-1000a.mp3",
+    "source": "World War One Podcast",
+    "duration": 825,
+    "description": "Professor Christopher Clark unpicks the complex sequence of events that led to WW1. Today, how British decision-makers reacted in the 'July Crisis' of 1914.",
+    "image": "http://www.bbc.co.uk/podcasts/assets/artwork/ww1.jpg"
+  },
+  {
+    "name": "At £100m, phone hacking trial makes history for expense - Telegraph",
+    "type": "article",
+    "url": "http://www.telegraph.co.uk/news/uknews/phone-hacking/10924126/At-100m-phone-hacking-trial-makes-history-for-expense.html",
+    "source": "Telegraph.co.uk",
+    "duration": null,
+    "description": "The phone-hacking trial has been one of the most expensive cases in British \n criminal history, with News International bearing more than half of the \n expense",
+    "image": "http://i.telegraph.co.uk/multimedia/archive/02952/brooks_2952724k.jpg"
+  },
+  {
+    "name": "Read Like a Writer and Write Like One",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/PDP2r-AuxH8",
+    "source": "Youtube",
+    "duration": 416,
+    "description": "Read Like a Writer and Write Like One\nBy Lawrence Spann\n\nWatch on PechaKucha.org: \nhttp://www.pechakucha.org/presentations/read-like-a-writer-and-write-like-one\n\nLawrence Spann has a keen interest in literature and writing. Drawing from life experience and an advanced degree in Creative Writing and the Medical Humanities, he approaches the process of writing through the lives and works of poets, writers, song writers, artists and historical figures. \n\n\"Presentation of the Day\" on May 17, 2014.\n\nRecorded at PechaKucha Night Santa Barbara Vol. 10:\nhttp://www.pechakucha.org/events/52b8a29fdbdd206820000003\n\nFor more presentations from Santa Barbara or info on upcoming events:\nhttp://www.pechakucha.org/cities/santa-barbara\n\nWatch more PechaKucha presentations online:\nhttp://www.pechakucha.org/watch\n\nPechaKucha Night, now in over 760 cities, was devised in Tokyo in February 2003 Astrid Klein and Mark Dytham (Klein Dytham architecture) as an event for young designers to meet, network, and show their work in public. \n\nFind out more at: http://www.pechakucha.org\n\n---",
+    "image": "https://i.ytimg.com/vi/PDP2r-AuxH8/hqdefault.jpg"
+  },
+  {
+    "name": "WWF Together - Tigers",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/0qHCu6sUMng",
+    "source": "World Wildlife Fund",
+    "duration": 53,
+    "description": "Download WWF Together from World Wildlife Fund. Available now on iPad, Android and Kindle Fire tablets. http://worldwildlife.org/together\n\nExperience the world's most amazing animals in one app — together. This interactive experience brings you closer to the stories of elephants, whales, rhinos and other fascinating species. Discover their lives and the work of WWF in a way you've never seen before. Fold up each animal's story into origami and share it with the world. It's one way to help build a future in which people live in harmony with nature.\n\nIt may seem small, but sharing these stories can make a big difference. Thank you in advance for helping us spread the word — our success depends on the support of friends like you. \n\nLearn more about WWF: worldwildlife.org",
+    "image": "https://i.ytimg.com/vi/0qHCu6sUMng/maxresdefault.jpg"
+  },
+  {
+    "name": "The Crucible, Adrian Schiller",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/fNQvkKlJG0E",
+    "source": "OldVic",
+    "duration": 60,
+    "description": "Book now http://bit.ly/1pscSNS\n0844 871 7628\n\nRichard Armitage stars in Arthur Miller's classic American drama brought vividly to life in this visceral new production by internationally acclaimed director Yaël Farber.\n\nIn a small tight-knit community personal grievances collide with lust and superstition, fuelling widespread hysteria. Miller's timeless parable attacks the evils of mindless persecution and the terrifying power of false accusations. \n\nSat 21 June -- Sat 13 Sept\n\nFilm produced by Strike Digital",
+    "image": "https://i.ytimg.com/vi/fNQvkKlJG0E/maxresdefault.jpg"
+  },
+  {
+    "name": "Great Job, Internet!: Someone mixed “Hello!” from The Book Of Mormon into South Park",
+    "type": "article",
+    "url": "http://www.avclub.com/article/someone-mixed-hello-book-mormon-south-park-205942?utm_medium=RSS&utm_campaign=feeds",
+    "source": "The A.V. Club",
+    "duration": null,
+    "description": "\n \n \n Even before penning the Tony-winning The Book Of Mormon, South Park creators Trey Parker and Matt Stone never bothered to hide the influence of musical theater on their work. The residents of their famously excitable Colorado town have always burst into elaborately choreographed song at the drop of a hat (especially in Bigger, Longer, And Uncut, the South Park feature film, which is a musical in all but name). But though Parker and Stone gave their stage work a wink in the ending to Season 15’s musical-themed episode “Broadway Bro Down,” they've never incorporated any of their Book Of Mormon work directly into the show.Leave it to fans on the Internet, then, to pick up the slack. Animator Simon Chong has produced the following short animation, taking the musical’s opening number, “Hello!,” about church elders thanklessly proselytizing door-to-door, and setting it in everyone’s favorite quiet ...\n \n",
+    "image": "http://i.onionstatic.com/avclub/5151/91/16x9/1200.jpg"
+  },
+  {
+    "name": "Going Global 2014 Opening plenary panel discussion: innovation, inclusion and impact",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/o93Gbv91FqQ",
+    "source": "British Council",
+    "duration": 3949,
+    "description": "Going GLobal 2014: Opening Plenary on Inclusion, innovation, impact \nTuesday 29 April 2014: PL1\n\nChair: Nik Gowing, International Broadcaster and Journalist\n\nPanel:\nTim Bozik, President Higher Education, Pearson, USA\nMolly Corbett Broad, President, American Council on Education, USA\nEugenia Garduño, Head of Latin America, Organisation for Economic Corporation and Economic Development (OECD)\nDr. Martha Navarro-Albo, Deputy Director General of Academic Cooperation, Directorate General for Technical and Scientific Cooperation, Agency of International Cooperation for Development, Ministry of Foreign Affairs, Mexico\nProfessor Colin Riordan, President and Vice-Chancellor at Cardiff University and Chair, UK Higher Education International Unit\nAshok Thakur, Secretary, Ministry of Human Resource Development, India\n\nMore information on this session: http://www.britishcouncil.org/Going-Global/programme/sessions/opening-plenary-innovation-inclusion-impact",
+    "image": "https://i.ytimg.com/vi/o93Gbv91FqQ/maxresdefault.jpg"
+  },
+  {
+    "name": "AICN HORROR Send in the Clowns: Bug’s got an advance review of CIRCUS OF THE DEAD!",
+    "type": "article",
+    "url": "http://www.aintitcool.com/node/68000?utm_source=full-feed&utm_medium=feed&utm_term=reviews&utm_campaign=1310_RSS",
+    "source": "Ain't It Cool News",
+    "duration": null,
+    "description": "AICN HORROR Send in the Clowns: Bug’s got an advance review of CIRCUS OF THE DEAD!\nRead the full article on AICN\n\n Logo by Kristian HornINTROWhat the &#$% is ZOMBIES & SHARKS?Ambush Bug here, shamelessly donning my Ringmaster top hat to put the spotlight on a special series of AICN HORROR: ZOMBIES & SHARKS columns—Send in the Clowns! To celebrate the news that my new circus horror comic, PIROUETTE from Black Mask Studios is available for order in July’s Diamond Previews (item code JUL140937), I am going to be taking an extensive look at all kinds of clown horrors in film and other media over the next few weeks.PIROUETTE is a comic I’ve been developing for a quite a while with interior art from the fantastic Carlos Granda and a first issue cover by Ale Garza. The story is described as Raised from infancy by duplicitous clowns who entertain by day and menace by night, Pirouette dreams of washing the paint from her face and escaping to a better life far away from her cruel circus family… because when the spotlights dim and the crowds disperse, the clown princess’ big-top dreams give way to a nightmarish world of monsters with painted smiles. The book hits all of the coolest of cool comic shops in September, but you’ve got to tell your store owner to order it now in order to get it!I can’t wait for folks to see the book which I promise is filled with big top terror and death-defying danger. In the coming weeks, I’ll share some behind the scenes stuff about PIROUETTE at the top of each of these\n\n\nFinish the article on AICN",
+    "image": "http://media.aintitcool.com/static/social/facebook-wide.png"
+  },
+  {
+    "name": "What If the Electoral College is Tied?",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/sHEDXzOfENI",
+    "source": "CGP Grey",
+    "duration": 217,
+    "description": "Help support videos like this: http://www.cgpgrey.com/subbable\nCGPGrey T-Shirts: http://goo.gl/1Wlnd \nGrey's Blog: http://blog.cgpgrey.com\n\nTwitter: http://twitter.com/#!/cgpgrey\n\nGoogle+: http://plus.google.com/115415241633901418932/posts\n\nFacebook: http://www.facebook.com/pages/Greys-Blog/193301110697381",
+    "image": "https://i1.ytimg.com/vi/sHEDXzOfENI/maxresdefault.jpg"
+  },
+  {
+    "name": "Anti-Gravity Wheel Explained",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/tLMpdBjA2SU",
+    "source": "Youtube",
+    "duration": 244,
+    "description": "It's a little shaky but if you average out the oscillations I think the result is clear. Again, huge thank you's to A/Prof Emeritus Rod Cross, Helen Georgiou, Alex Yeung, and Chris Stewart, Tom Gordon, the University of Sydney Mechanical Engineering shop, Duncan and co. Ralph and the School of Physics.",
+    "image": "https://i.ytimg.com/vi/tLMpdBjA2SU/maxresdefault.jpg"
+  },
+  {
+    "name": "Five secret gardens hidden in the city",
+    "type": "article",
+    "url": "http://now-here-this.timeout.com/2014/07/03/five-secret-gardens-hidden-in-the-city/",
+    "source": "Time Out",
+    "duration": null,
+    "description": "Keep it to yourself, but London is full of peaceful green places offering a bit of respite from the city. Sara O’Reilly guides you to five secret gardens&#8230; Barbican Conservatory London might seem like a concrete jungle sometimes, but it’s still unexpected to see a slice of tropical rainforest in the City. You’ll find one [&#8230;]",
+    "image": "http://now-here-this.timeout.com/wp-content/uploads/2014/06/HelenBabbs189_RG-240x160.jpg"
+  },
+  {
+    "name": "Sting: How I started writing songs again",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/oy25A7vnigg",
+    "source": "TED",
+    "duration": 1396,
+    "description": "Sting's early life was dominated by a shipyard—and he dreamed of nothing more than escaping the industrial drudgery. But after a nasty bout of writer's block that stretched on for years, Sting found himself channeling the stories of the shipyard workers he knew in his youth for song material. In a lyrical, confessional talk, Sting treats us to songs from his upcoming musical, and to an encore of \"Message in a Bottle.\"\n\nTEDTalks is a daily video podcast of the best talks and performances from the TED Conference, where the world's leading thinkers and doers give the talk of their lives in 18 minutes (or less). Look for talks on Technology, Entertainment and Design -- plus science, business, global issues, the arts and much more.\nFind closed captions and translated subtitles in many languages at http://www.ted.com/translate\n\nFollow TED news on Twitter: http://www.twitter.com/tednews\nLike TED on Facebook: https://www.facebook.com/TED\n\nSubscribe to our channel: http://www.youtube.com/user/TEDtalksDirector",
+    "image": "https://i1.ytimg.com/vi/oy25A7vnigg/maxresdefault.jpg"
+  },
+  {
+    "name": "The Improbable Persistence of Swimming Pools Built in the Ocean",
+    "type": "article",
+    "url": "http://feedproxy.google.com/~r/AtlanticScienceAndTechnology/~3/nxu8XnBcA5c/story01.htm",
+    "source": "The Atlantic",
+    "duration": null,
+    "description": "The natatorium closes off part of the sea—but not without the constant intervention of humans.",
+    "image": "http://cdn.theatlantic.com/static/newsroom/img/mt/2014/05/main/lead_large.jpg?n5zbhx"
+  }
+]

@@ -24,6 +24,7 @@
     "fastclick": "~1.0.3",
     "less": "~1.7.4",
     "react": "~0.11.1",
+    "react-classset": "git+https://github.com/oncletom/react-classset.git#master",
     "xhr": "~1.14.1"
   },
   "devDependencies": {
