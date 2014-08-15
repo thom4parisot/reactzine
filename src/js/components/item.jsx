@@ -15,7 +15,7 @@ module.exports = React.createClass({
 
     return (
       <article className={this.getClassNames()} onClick={this.handleClick}>
-        <header className="item__cover" data-background={data.image}></header>
+        <header className="item__cover" style={this.getStyle()}></header>
 
         <h2 className="item__title">{data.name}</h2>
 
@@ -62,12 +62,19 @@ module.exports = React.createClass({
    UI Helpers
    */
 
+  getStyle: function getStyle(){
+    return {
+      backgroundImage: 'url('+ this.props.data.image +')'
+    };
+  },
+
   getClassNames: function getClassNames(){
     return cx(
       'item',
       'item--' + (this.props.data.type || 'unknown'),
       this.state.favourited && 'item--favourited',
-      this.state.selected && 'item--selected'
+      this.state.selected && 'item--selected',
+      this.props.layout && 'item--' + this.props.layout
     );
   },
 
