@@ -21,15 +21,17 @@ function getLayout(index, arr, rules){
 }
 
 module.exports = React.createClass({
-  getInitialState: function() {
-    return {items: []};
+  getDefaultProps: function() {
+    return { items: [] };
   },
 
   render: function(){
     var pages = this.paginate(5);
 
     return (
-      <div className="items-list">{pages}</div>
+      <div className="items-list">
+        <div className="items-list__container">{pages}</div>
+      </div>
     );
   },
 

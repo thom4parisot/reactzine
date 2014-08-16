@@ -1,10 +1,10 @@
 'use strict';
 
 var getData = require('./feed.js').get;
-var MainView = require('./views/main.jsx');
 var React = module.exports.React = require('react');
 
-var appContainerElement = document.getElementById('app-container');
+var AppView = require('./app.jsx');
+var appContainerElement = document.body;
 
 /*
  React Setup
@@ -14,21 +14,20 @@ React.initializeTouchEvents(true);
 /*
  Construct the App skeleton
  */
-React.renderComponent(MainView({ items: [] }), appContainerElement);
+React.renderComponent(AppView(), appContainerElement);
 
 /*
  Gets data asynchronously
  */
-getData('data.json', onDataSuccess, onDataError);
-//getData('https://s3-eu-west-1.amazonaws.com/irfs-application/data.json', onDataSuccess, onDataError);
+//getData('data.json', onDataSuccess, onDataError);
+getData('https://s3-eu-west-1.amazonaws.com/irfs-application/data.json', onDataSuccess, onDataError);
 
 /*
  Callbacks
  */
 
 function onDataSuccess(items){
-  React.renderComponent(MainView({ items: items }), appContainerElement);
-
+  React.renderComponent(AppView({ articles: items }), appContainerElement);
 }
 
 function onDataError(err){

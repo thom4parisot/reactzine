@@ -12,12 +12,14 @@ body {
 }
 
 #app-chrome {
-  margin: 0.5rem;
+  position: relative;
   height: 100vh;
 }
 
 #app-header {
+  box-sizing: border-box;
   height: 15vh;
+  padding-top: @spacing;
   text-align: center;
 
   img {
@@ -26,7 +28,34 @@ body {
 }
 
 #app-container {
-  height: 85vh;
-  overflow-x:hidden;
-  width: 100%;
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+
+.touch-icon {
+  background-color: black;
+  color: #fff;
+  display: inline-block;
+  text-indent: -300em;
+
+  background-size: contain;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+
+  &:before {
+    content: " ";
+    display: block;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-indent: 0;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 100;
+  }
+
+  &.touch-icon--close:before {
+    content: "X"
+  }
 }

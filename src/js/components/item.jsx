@@ -48,6 +48,11 @@ module.exports = React.createClass({
   handleClick: function(event){
     event.preventDefault();
 
+    event.data = {
+      action: 'article.open',
+      actionObject: this.props.data
+    };
+
     this.setState({ selected: !this.state.selected, favourited: this.state.favourited });
   },
 

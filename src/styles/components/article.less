@@ -1,0 +1,42 @@
+.article-view {
+  top: 90vh;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+  -webkit-transition: -webkit-transform .6s;
+
+  &.article-view--loaded {
+    -webkit-transform: translateY(-90vh);
+  }
+}
+
+.article-view__header {
+  background-color: @secondary-color;
+  color: @secondary-bg-color;
+
+  .touch-icon--close {
+    position: absolute;
+    right: @spacing;
+    top: @spacing;
+  }
+}
+
+.article-view__header,
+.article-view__footer {
+  height: 10vh;
+}
+
+.article-view__title {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  margin: 0 3rem 0 @spacing/2;
+  padding-top: @spacing/2;
+}
+
+.article-view__remote-content {
+  background-color: #fff;
+  border: none;
+  height: 90vh;
+  width: 100%;
+}
