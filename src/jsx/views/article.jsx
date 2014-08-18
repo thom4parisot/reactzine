@@ -39,7 +39,7 @@ module.exports = React.createClass({
           <span className="touch-icon touch-icon--close" onClick={this.handleCloseClick}>Close</span>
         </header>
 
-        <iframe ref="iframe" className="article-view__remote-content" src={data.url} sandbox="allow-scripts" async></iframe>
+        <iframe ref="iframe" className="article-view__remote-content" src={data.url} sandbox="allow-scripts allow-same-origin" async></iframe>
 
         <footer className="article-view__footer">
 
@@ -49,9 +49,9 @@ module.exports = React.createClass({
   },
 
   handleCloseClick: function(event){
-    event.data.action = 'article.close';
+    this.setState({ loaded: false });
 
-    this.replaceState(this.getInitialState());
+    event.data.action = 'article.close';
   },
 
   handleLoad: function(){
