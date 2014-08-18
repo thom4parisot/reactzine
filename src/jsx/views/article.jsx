@@ -14,6 +14,14 @@ module.exports = React.createClass({
     return { loaded: false }
   },
 
+  shouldComponentUpdate: function(nextProps, nextState){
+    if (this.state.loaded && this.state.loaded === nextState.loaded) {
+      return false;
+    }
+
+    return true;
+  },
+
   componentDidUpdate: function(){
     if (!this.refs.iframe) {
       return;
