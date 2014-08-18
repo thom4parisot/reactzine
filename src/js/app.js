@@ -3,7 +3,7 @@
 var getData = require('./feed.js').get;
 var React = module.exports.React = require('react');
 
-var AppView = require('./app.jsx');
+var AppView = require('../jsx/app.jsx');
 var appContainerElement = document.body;
 
 /*
