@@ -19,7 +19,9 @@ module.exports = React.createClass({
       return;
     }
 
-    this.refs.iframe.getDOMNode().addEventListener('load', this.handleLoad.bind(this));
+    // way too slow on mobile
+    // this.refs.iframe.getDOMNode().addEventListener('load', this.handleLoad.bind(this));
+    setTimeout(this.handleLoad.bind(this), 1000);
   },
 
   render: function(){
