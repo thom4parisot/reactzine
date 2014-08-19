@@ -40,7 +40,7 @@ function cx(classNames) {
   } else {
     return Array.prototype.filter.call(arguments, function(d){
       if (typeof d === 'boolean' || d === null || d === '' || d === undefined || (typeof d === 'number' && isNaN(d))){
-	return null;
+        return null;
       }
 
       return String(d);
@@ -90,7 +90,7 @@ module.exports = createXHR
 
 function createXHR(options, callback) {
     if (typeof options === "string") {
-	options = { uri: options }
+        options = { uri: options }
     }
 
     options = options || {}
@@ -99,11 +99,11 @@ function createXHR(options, callback) {
     var xhr = options.xhr || null
 
     if (!xhr) {
-	if (options.cors || options.useXDR) {
-	    xhr = new XDR()
-	}else{
-	    xhr = new XHR()
-	}
+        if (options.cors || options.useXDR) {
+            xhr = new XDR()
+        }else{
+            xhr = new XHR()
+        }
     }
 
     var uri = xhr.url = options.uri || options.url;
@@ -115,12 +115,12 @@ function createXHR(options, callback) {
     var key
 
     if ("json" in options) {
-	isJson = true
-	headers["Accept"] = "application/json"
-	if (method !== "GET" && method !== "HEAD") {
-	    headers["Content-Type"] = "application/json"
-	    body = JSON.stringify(options.json)
-	}
+        isJson = true
+        headers["Accept"] = "application/json"
+        if (method !== "GET" && method !== "HEAD") {
+            headers["Content-Type"] = "application/json"
+            body = JSON.stringify(options.json)
+        }
     }
 
     xhr.onreadystatechange = readystatechange
@@ -128,39 +128,39 @@ function createXHR(options, callback) {
     xhr.onerror = error
     // IE9 must have onprogress be set to a unique function.
     xhr.onprogress = function () {
-	// IE must die
+        // IE must die
     }
     // hate IE
     xhr.ontimeout = noop
     xhr.open(method, uri, !sync)
-				    //backward compatibility
+                                    //backward compatibility
     if (options.withCredentials || (options.cors && options.withCredentials !== false)) {
-	xhr.withCredentials = true
+        xhr.withCredentials = true
     }
 
     // Cannot set timeout with sync request
     if (!sync) {
-	xhr.timeout = "timeout" in options ? options.timeout : 5000
+        xhr.timeout = "timeout" in options ? options.timeout : 5000
     }
 
     if (xhr.setRequestHeader) {
-	for(key in headers){
-	    if(headers.hasOwnProperty(key)){
-		xhr.setRequestHeader(key, headers[key])
-	    }
-	}
+        for(key in headers){
+            if(headers.hasOwnProperty(key)){
+                xhr.setRequestHeader(key, headers[key])
+            }
+        }
     } else if (options.headers) {
-	throw new Error("Headers cannot be set on an XDomainRequest object");
+        throw new Error("Headers cannot be set on an XDomainRequest object");
     }
 
     if ("responseType" in options) {
-	xhr.responseType = options.responseType
+        xhr.responseType = options.responseType
     }
-
-    if ("beforeSend" in options &&
-	typeof options.beforeSend === "function"
+    
+    if ("beforeSend" in options && 
+        typeof options.beforeSend === "function"
     ) {
-	options.beforeSend(xhr)
+        options.beforeSend(xhr)
     }
 
     xhr.send(body)
@@ -168,47 +168,47 @@ function createXHR(options, callback) {
     return xhr
 
     function readystatechange() {
-	if (xhr.readyState === 4) {
-	    load()
-	}
+        if (xhr.readyState === 4) {
+            load()
+        }
     }
 
     function load() {
-	var error = null
-	var status = xhr.statusCode = xhr.status
-	// Chrome with requestType=blob throws errors arround when even testing access to responseText
-	var body = null
+        var error = null
+        var status = xhr.statusCode = xhr.status
+        // Chrome with requestType=blob throws errors arround when even testing access to responseText
+        var body = null
 
-	if (xhr.response) {
-	    body = xhr.body = xhr.response
-	} else if (xhr.responseType === 'text' || !xhr.responseType) {
-	    body = xhr.body = xhr.responseText || xhr.responseXML
-	}
+        if (xhr.response) {
+            body = xhr.body = xhr.response
+        } else if (xhr.responseType === 'text' || !xhr.responseType) {
+            body = xhr.body = xhr.responseText || xhr.responseXML
+        }
 
-	if (status === 1223) {
-	    status = 204
-	}
+        if (status === 1223) {
+            status = 204
+        }
 
-	if (status === 0 || (status >= 400 && status < 600)) {
-	    var message = (typeof body === "string" ? body : false) ||
-		messages[String(status).charAt(0)]
-	    error = new Error(message)
-	    error.statusCode = status
-	}
+        if (status === 0 || (status >= 400 && status < 600)) {
+            var message = (typeof body === "string" ? body : false) ||
+                messages[String(status).charAt(0)]
+            error = new Error(message)
+            error.statusCode = status
+        }
+        
+        xhr.status = xhr.statusCode = status;
 
-	xhr.status = xhr.statusCode = status;
+        if (isJson) {
+            try {
+                body = xhr.body = JSON.parse(body)
+            } catch (e) {}
+        }
 
-	if (isJson) {
-	    try {
-		body = xhr.body = JSON.parse(body)
-	    } catch (e) {}
-	}
-
-	callback(error, xhr, body)
+        callback(error, xhr, body)
     }
 
     function error(evt) {
-	callback(evt, xhr)
+        callback(evt, xhr)
     }
 }
 
@@ -253,7 +253,7 @@ function once (fn) {
 var getData = require('./feed.js').get;
 var React = module.exports.React = require('react');
 
-var AppView = require('./app.jsx');
+var AppView = require('../jsx/app.jsx');
 var appContainerElement = document.body;
 
 /*
@@ -283,7 +283,28 @@ function onDataSuccess(items){
 function onDataError(err){
 
 }
-},{"./app.jsx":7,"./feed.js":9,"react":2}],7:[function(require,module,exports){
+},{"../jsx/app.jsx":8,"./feed.js":7,"react":2}],7:[function(require,module,exports){
+'use strict';
+
+var xhr = require('xhr');
+
+module.exports = {
+  get: function(url, onSuccess, onError){
+    xhr({ url: url, json: true, timeout: 1000 }, function(err, response, body){
+      if (err){
+        if (typeof onError === 'function'){
+          return onError(err);
+        }
+        else {
+          throw Error(err);
+        }
+      }
+
+      onSuccess(body);
+    });
+  }
+};
+},{"xhr":3}],8:[function(require,module,exports){
 /** @jsx React.DOM */
 
 'use strict';
@@ -304,17 +325,17 @@ var app = module.exports = React.createClass({displayName: 'exports',
 
   render: function(){
     return (
-      React.DOM.div({id: "app-chrome"},
-	React.DOM.header({id: "app-header"},
-	  React.DOM.img({src: "src/assets/bbc_logo.png", alt: "BBC"})
-	),
+      React.DOM.div({id: "app-chrome"}, 
+        React.DOM.header({id: "app-header"}, 
+          React.DOM.img({src: "src/assets/bbc_logo.png", alt: "BBC"})
+        ), 
 
-	React.DOM.main({id: "app-container", onClick: this.handleClick},
+        React.DOM.main({id: "app-container", onClick: this.handleClick}, 
 
-	  MainView({items: this.props.articles}),
-	  ArticleView({data: this.state.article})
+          MainView({items: this.props.articles}), 
+          ArticleView({data: this.state.article})
 
-	)
+        )
       )
     );
   },
@@ -333,7 +354,7 @@ var app = module.exports = React.createClass({displayName: 'exports',
     }
   }
 });
-},{"./views/article.jsx":10,"./views/main.jsx":11,"react":2}],8:[function(require,module,exports){
+},{"./views/article.jsx":10,"./views/main.jsx":11,"react":2}],9:[function(require,module,exports){
 /** @jsx React.DOM */
 
 'use strict';
@@ -350,30 +371,30 @@ module.exports = React.createClass({displayName: 'exports',
     var data = this.props.data;
 
     return (
-      React.DOM.article({className: this.getClassNames(), onClick: this.handleClick},
-	React.DOM.header({className: "item__cover", style: this.getStyle()}),
+      React.DOM.article({className: this.getClassNames(), onClick: this.handleClick}, 
+        React.DOM.header({className: "item__cover", style: this.getStyle()}), 
 
-	React.DOM.h2({className: "item__title"}, data.name),
+        React.DOM.h2({className: "item__title"}, data.name), 
 
-	React.DOM.footer(null,
-	  React.DOM.ul({className: "item-metadata"},
-	    React.DOM.li({className: "item-metadata__data item-metadata__data--source"}, data.source),
-	    React.DOM.li({className: "item-metadata__data item-metadata__data--duration"}, this.getDurationLabel())
-	  ),
+        React.DOM.footer(null, 
+          React.DOM.ul({className: "item-metadata"}, 
+            React.DOM.li({className: "item-metadata__data item-metadata__data--source"}, data.source), 
+            React.DOM.li({className: "item-metadata__data item-metadata__data--duration"}, this.getDurationLabel())
+          ), 
 
-	  React.DOM.ul({className: "item-actions"},
-	    React.DOM.li({className: "item-actions__playback"},
-	      React.DOM.a({href: "#play", className: "item-actions__playback-link", onClick: this.handleClick},
-		data.duration && 'Play'
-	      )
-	    ),
-	    React.DOM.li({className: "item-actions__favourites"},
-	      React.DOM.a({href: "#favourite", className: "item-actions__favourites-link", onClick: this.toggleFavourite},
-		!this.state.favourited ? 'Add to' : 'Remove from', " favourites"
-	      )
-	    )
-	  )
-	)
+          React.DOM.ul({className: "item-actions"}, 
+            React.DOM.li({className: "item-actions__playback"}, 
+              React.DOM.a({href: "#play", className: "item-actions__playback-link", onClick: this.handleClick}, 
+                data.duration && 'Play'
+              )
+            ), 
+            React.DOM.li({className: "item-actions__favourites"}, 
+              React.DOM.a({href: "#favourite", className: "item-actions__favourites-link", onClick: this.toggleFavourite}, 
+                !this.state.favourited ? 'Add to' : 'Remove from', " favourites"
+              )
+            )
+          )
+        )
       )
       );
   },
@@ -423,28 +444,7 @@ module.exports = React.createClass({displayName: 'exports',
     return this.props.duration && Math.ceil(this.props.duration / 60) + ' min';
   }
 });
-},{"react":2,"react-classset":1}],9:[function(require,module,exports){
-'use strict';
-
-var xhr = require('xhr');
-
-module.exports = {
-  get: function(url, onSuccess, onError){
-    xhr({ url: url, json: true, timeout: 1000 }, function(err, response, body){
-      if (err){
-	if (typeof onError === 'function'){
-	  return onError(err);
-	}
-	else {
-	  throw Error(err);
-	}
-      }
-
-      onSuccess(body);
-    });
-  }
-};
-},{"xhr":3}],10:[function(require,module,exports){
+},{"react":2,"react-classset":1}],10:[function(require,module,exports){
 /** @jsx React.DOM */
 
 'use strict';
@@ -461,12 +461,22 @@ module.exports = React.createClass({displayName: 'exports',
     return { loaded: false }
   },
 
+  shouldComponentUpdate: function(nextProps, nextState){
+    if (this.state.loaded && this.state.loaded === nextState.loaded) {
+      return false;
+    }
+
+    return true;
+  },
+
   componentDidUpdate: function(){
     if (!this.refs.iframe) {
       return;
     }
 
-    this.refs.iframe.getDOMNode().addEventListener('load', this.handleLoad.bind(this));
+    // way too slow on mobile
+    // this.refs.iframe.getDOMNode().addEventListener('load', this.handleLoad.bind(this));
+    setTimeout(this.handleLoad.bind(this), 1000);
   },
 
   render: function(){
@@ -477,26 +487,26 @@ module.exports = React.createClass({displayName: 'exports',
     }
 
     return (
-      React.DOM.div({className: this.getClassNames()},
-	React.DOM.header({className: "article-view__header"},
-	  React.DOM.h1({className: "article-view__title"}, data.name),
+      React.DOM.div({className: this.getClassNames()}, 
+        React.DOM.header({className: "article-view__header"}, 
+          React.DOM.h1({className: "article-view__title"}, data.name), 
 
-	  React.DOM.span({className: "touch-icon touch-icon--close", onClick: this.handleCloseClick}, "Close")
-	),
+          React.DOM.span({className: "touch-icon touch-icon--close", onClick: this.handleCloseClick}, "Close")
+        ), 
 
-	React.DOM.iframe({ref: "iframe", className: "article-view__remote-content", src: data.url, async: true}),
+        React.DOM.iframe({ref: "iframe", className: "article-view__remote-content", src: data.url, sandbox: "allow-scripts allow-same-origin", async: true}), 
 
-	React.DOM.footer({className: "article-view__footer"}
+        React.DOM.footer({className: "article-view__footer"}
 
-	)
+        )
       )
     );
   },
 
   handleCloseClick: function(event){
-    event.data.action = 'article.close';
+    this.setState({ loaded: false });
 
-    this.replaceState(this.getInitialState());
+    event.data.action = 'article.close';
   },
 
   handleLoad: function(){
@@ -542,8 +552,8 @@ module.exports = React.createClass({displayName: 'exports',
     var pages = this.paginate(5);
 
     return (
-      React.DOM.div({className: "items-list"},
-	React.DOM.div({className: "items-list__container"}, pages)
+      React.DOM.div({className: "items-list"}, 
+        React.DOM.div({className: "items-list__container"}, pages)
       )
     );
   },
@@ -560,9 +570,9 @@ module.exports = React.createClass({displayName: 'exports',
 
     return pages.map(function(page, i){
       return (
-	React.DOM.div({key: i, className: "items-list__page"},
-	  page.map(self.renderPageItem)
-	)
+        React.DOM.div({key: i, className: "items-list__page"}, 
+          page.map(self.renderPageItem)
+        )
       )
     });
   },
@@ -578,5 +588,5 @@ module.exports = React.createClass({displayName: 'exports',
     );
   }
 });
-},{"../components/item.jsx":8,"react":2}]},{},[6])(6)
+},{"../components/item.jsx":9,"react":2}]},{},[6])(6)
 });
