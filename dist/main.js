@@ -269,8 +269,8 @@ React.renderComponent(AppView(), appContainerElement);
 /*
  Gets data asynchronously
  */
-//getData('data.json', onDataSuccess, onDataError);
-getData('https://s3-eu-west-1.amazonaws.com/irfs-application/data.json', onDataSuccess, onDataError);
+getData('data.json', onDataSuccess, onDataError);
+//getData('https://s3-eu-west-1.amazonaws.com/irfs-application/data.json', onDataSuccess, onDataError);
 
 /*
  Callbacks
